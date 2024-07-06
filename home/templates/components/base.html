@@ -1,0 +1,26 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Generate</title>
+    <link rel="stylesheet" href="{% static 'styles/main.css' %}">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{% url "index" %}">Home</a></li>
+                <li><a href="{% url "generator" %}">Generator</a></li>
+            </ul>
+        </nav>
+    </header>
+    <hr>
+    <main>
+        {% block main %}{% endblock main %}
+    </main>
+    {% block footer %}{% endblock footer %}
+</body>
+</html>

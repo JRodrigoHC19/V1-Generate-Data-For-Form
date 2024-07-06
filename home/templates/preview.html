@@ -1,0 +1,21 @@
+{% extends "components/base_void.html" %}
+
+{% block main %}
+<table border="1">
+    <thead>
+        <th>#</th>
+        <th>Full Name</th>
+        <th>Email</th>
+    </thead>
+
+    <tbody>
+    {% for i in data %}
+        <tr>
+            <td>{{i.id}}</td>
+            <td>{{i.full_name}}</td>
+            <td>{{i.email}}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock main %}

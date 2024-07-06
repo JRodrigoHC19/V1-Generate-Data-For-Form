@@ -1,0 +1,11 @@
+{% extends "components/base_void.html" %}
+
+{% block main %}
+    <h1>Generator</h1>
+
+    <form method="post" action="{% url 'preview' %}">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button type="submit">Generar</button>
+    </form>
+{% endblock main %}
